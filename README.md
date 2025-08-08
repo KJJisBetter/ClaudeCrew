@@ -5,12 +5,24 @@
 
 ## Quick Install
 
-### Pure Claude (No Dependencies)
+```bash
+curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/install.sh | bash
+```
+
+This interactive installer will:
+- Check your git setup
+- Let you choose between Pure Claude or Agent OS template
+- Configure everything automatically
+- Run the setup wizard
+
+### Direct Install (Advanced)
+
+Pure Claude (no dependencies):
 ```bash
 curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/install-pure.sh | bash
 ```
 
-### Agent OS Enhanced (Requires Agent OS)
+Agent OS Enhanced (requires Agent OS):
 ```bash
 curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/install-agenos.sh | bash
 ```
