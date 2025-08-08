@@ -102,10 +102,9 @@ cd agent-os-template/
 
 ### For Agent OS Template
 
-1. Install Agent OS first: `npm install -g @builder/agent-os`
-2. Initialize Agent OS: `/plan-product`
-3. Copy `agent-os-template/` to your project
-4. Continue using Agent OS - now enhanced
+1. Install Agent OS first: [buildermethods.com/agent-os](https://buildermethods.com/agent-os)
+2. Copy `agent-os-template/` to your project
+3. Continue using Agent OS - now enhanced
 
 ## How They Work
 

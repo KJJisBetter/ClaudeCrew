@@ -11,9 +11,8 @@ echo ""
 if [ ! -d ".agent-os" ]; then
     echo "✗ Agent OS not found!"
     echo ""
-    echo "Please initialize Agent OS first:"
-    echo "  1. Install: npm install -g @builder/agent-os"
-    echo "  2. Run: /plan-product"
+    echo "Agent OS is required for this template."
+    echo "Learn more: https://buildermethods.com/agent-os"
     echo ""
     exit 1
 fi
