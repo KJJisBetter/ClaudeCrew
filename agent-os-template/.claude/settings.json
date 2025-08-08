@@ -1,0 +1,37 @@
+{
+  "hooks": {
+    "userPromptSubmit": {
+      "description": "Auto-create branch if on main",
+      "command": "bash -c \"if [[ $(git branch --show-current) == 'main' ]] && [[ '{user_prompt}' == *'/create-spec'* || '{user_prompt}' == *'/execute-tasks'* ]]; then git checkout -b feature/auto-$(date +%Y%m%d-%H%M%S) && echo 'Created feature branch automatically'; fi\""
+    },
+    "preToolUse": {
+      "bash": {
+        "description": "Block direct pushes to main",
+        "command": "bash -c \"if echo '{command}' | grep -E 'git push.*(origin main|origin master)' > /dev/null; then echo '❌ BLOCKED: Direct push to main not allowed. Create a PR instead.'; exit 1; fi\""
+      }
+    },
+    "postToolUse": {
+      "description": "Log activity for metrics",
+      "command": "echo '[{timestamp}] Tool: {tool_name} | Status: {status}' >> .claude/logs/activity.log"
+    }
+  },
+  "customCommands": {
+    "/status": {
+      "description": "Show current git and project status",
+      "command": "echo '=== Current Status ==='; git branch --show-current; echo '---'; git status -s; echo '---'; ls -la .agent-os/specs/ 2>/dev/null | tail -5 || echo 'No specs yet'"
+    },
+    "/cache-stats": {
+      "description": "Show cache statistics",
+      "command": "echo '=== Cache Stats ==='; find .claude/docs/internal -type f -name '*.md' | wc -l | xargs echo 'Cached patterns:'; du -sh .claude/docs 2>/dev/null | cut -f1 | xargs echo 'Cache size:'"
+    },
+    "/branch-list": {
+      "description": "Show all branches with dates",
+      "command": "git for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate:short) %(refname:short) %(subject)' | head -20"
+    }
+  },
+  "environment": {
+    "CLAUDE_NO_DIRECT_MAIN": "true",
+    "CLAUDE_AUTO_BRANCH": "true",
+    "CLAUDE_PRESERVE_HISTORY": "true"
+  }
+}
