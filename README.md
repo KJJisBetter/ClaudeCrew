@@ -3,6 +3,18 @@
 > **Production-ready orchestration templates for Claude Code**
 > **Two paths: Pure Claude or Agent OS Enhanced**
 
+## Quick Install
+
+### Pure Claude (No Dependencies)
+```bash
+curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/install-pure.sh | bash
+```
+
+### Agent OS Enhanced (Requires Agent OS)
+```bash
+curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/install-agenos.sh | bash
+```
+
 ## Important: About /init Command
 
 **WARNING**: Don't use the `/init` command after installing these templates. 
