@@ -24,8 +24,6 @@ echo ""
 # Download template files
 echo "Downloading Agent OS enhancement template..."
 curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/agent-os-template/CLAUDE.md -o CLAUDE.md
-curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/agent-os-template/setup.sh -o setup.sh
-chmod +x setup.sh
 
 # Create .claude directory structure
 echo "Creating .claude enhancement structure..."
@@ -41,11 +39,6 @@ mkdir -p .claude/context
 curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/agent-os-template/.claude/handoffs/team-activity.md -o .claude/handoffs/team-activity.md 2>/dev/null
 curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/agent-os-template/.claude/metrics/performance.md -o .claude/metrics/performance.md 2>/dev/null
 curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/agent-os-template/.claude/docs/internal/patterns/agent-os-specs.md -o .claude/docs/internal/patterns/agent-os-specs.md 2>/dev/null
-
-# Run setup
-echo ""
-echo "Running setup..."
-./setup.sh
 
 echo ""
 echo "✓ Agent OS enhancement installed!"
