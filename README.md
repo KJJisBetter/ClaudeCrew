@@ -7,13 +7,13 @@
 
 ### Pure Claude (no dependencies)
 ```bash
-curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/install-pure.sh | bash
+curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/scripts/install-pure.sh | bash
 ```
 Use this if you're using Claude Code without Agent OS.
 
 ### Agent OS Enhanced (requires Agent OS)
 ```bash
-curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/install-agenos.sh | bash
+curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/scripts/install-agenos.sh | bash
 ```
 Use this if you have Agent OS installed and want enhanced features.
 

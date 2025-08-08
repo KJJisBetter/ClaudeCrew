@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ClaudeCrew Pure Claude Template Installer
-# Usage: curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/install-pure.sh | bash
+# Usage: curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/scripts/install-pure.sh | bash
 
 echo "ClaudeCrew - Pure Claude Template"
 echo "=================================="

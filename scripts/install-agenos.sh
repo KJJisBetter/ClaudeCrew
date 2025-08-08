@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ClaudeCrew Agent OS Template Installer
-# Usage: curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/install-agenos.sh | bash
+# Usage: curl -sSL https://raw.githubusercontent.com/KJJisBetter/ClaudeCrew/main/scripts/install-agenos.sh | bash
 
 echo "ClaudeCrew - Agent OS Enhancement"
 echo "=================================="
